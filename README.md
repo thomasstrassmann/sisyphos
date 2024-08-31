@@ -1,6 +1,6 @@
 # Sisyphos
 
-When building a small SPA with (potentially) endless items of todos, I immediatley thought of the greek tale of Sisyphos, so I decided to call the App this way. This is a quick overview of all implemented features:
+When building a small SPA with (potentially) endless items of todos, I immediatley thought of the greek tale of Sisyphos, so I decided to call the app this way. This is a quick overview of all implemented features:
 
 - Adding, editing, deleting a todo item
 - Mark a todo as completed
@@ -8,7 +8,7 @@ When building a small SPA with (potentially) endless items of todos, I immediatl
 - use localstorage to persist items after reloading
 - implementation of drap and drop functionality with the help of a lib called react-dnd
 - due dates and highlighting todos, when overdue
-- basic resonsive design
+- basic responsive design
 
 The goal was to write clean and maintainable code, use best practices and avoid unnecessary repetition. It would have been possible to structure the code more granularly (e.g. move the crud functions to a separate file), but since each component consists of less than 150 lines of code anyway, I decided not to take this step.
 
