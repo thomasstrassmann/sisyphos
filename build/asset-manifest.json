@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sisyphos/static/css/main.bf0b4875.css",
-    "main.js": "/sisyphos/static/js/main.14608053.js",
+    "main.css": "/sisyphos/static/css/main.11b6f143.css",
+    "main.js": "/sisyphos/static/js/main.2e8f6e4b.js",
     "static/js/453.863319c1.chunk.js": "/sisyphos/static/js/453.863319c1.chunk.js",
     "static/media/Roboto-LightItalic.eot": "/sisyphos/static/media/Roboto-LightItalic.579fe6fb6d9835cbb23c.eot",
     "static/media/Roboto-BlackItalic.eot": "/sisyphos/static/media/Roboto-BlackItalic.1c2c45d7c196edd769a8.eot",
@@ -42,12 +42,12 @@
     "static/media/Roboto-Thin.woff2": "/sisyphos/static/media/Roboto-Thin.5aae52f5b730d1753df1.woff2",
     "static/media/sisyphos.png": "/sisyphos/static/media/sisyphos.b8a4fb3bcea707a1b479.png",
     "index.html": "/sisyphos/index.html",
-    "main.bf0b4875.css.map": "/sisyphos/static/css/main.bf0b4875.css.map",
-    "main.14608053.js.map": "/sisyphos/static/js/main.14608053.js.map",
+    "main.11b6f143.css.map": "/sisyphos/static/css/main.11b6f143.css.map",
+    "main.2e8f6e4b.js.map": "/sisyphos/static/js/main.2e8f6e4b.js.map",
     "453.863319c1.chunk.js.map": "/sisyphos/static/js/453.863319c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf0b4875.css",
-    "static/js/main.14608053.js"
+    "static/css/main.11b6f143.css",
+    "static/js/main.2e8f6e4b.js"
   ]
 }

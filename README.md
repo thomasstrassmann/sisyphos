@@ -18,7 +18,7 @@ The conception, logo design, project setup, coding itself and the debugging, sty
 
 ## Notes
 
-I decided to keep the styling and animations to a minimum, as a to-do app doesn't invite you to style too much, at least in my opinion.
+I decided to keep the styling and animations to a minimum, as a to-do app doesn't invite you to style too much, at least in my opinion. I have also omitted the header and footer, as this is not really necessary for a SPA with one view and for demonstration purposes only.
 
 The app was tested manually and fulfills all functional tests, furthermore compiled webpack without any hints / errors and there are no errors in the console either.
 

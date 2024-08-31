@@ -115,7 +115,7 @@ const App: React.FC = () => {
               <Dropdown.Toggle variant="secondary" id="dropdown-filter">
                 <span className='text-base'>Filter: {filter}</span>
               </Dropdown.Toggle>
-              <Dropdown.Menu>
+              <Dropdown.Menu className='border-secondary'>
                 <Dropdown.Item onClick={() => setFilter('all')}>All</Dropdown.Item>
                 <Dropdown.Item onClick={() => setFilter('active')}>Active</Dropdown.Item>
                 <Dropdown.Item onClick={() => setFilter('completed')}>Completed</Dropdown.Item>

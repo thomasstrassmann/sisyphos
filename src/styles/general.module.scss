@@ -27,7 +27,6 @@
   }
 
   .container {
-    position: relative;
     &::after{
         content: '';
         background-image: url('../images/sisyphos-detail.svg');
@@ -37,8 +36,8 @@
         height: 250px;
         position: absolute;
         background-size: contain;
-        right: -50px;
-        bottom: 35px;
+        right: 50px;
+        bottom: 50px;
     }
   }
 
