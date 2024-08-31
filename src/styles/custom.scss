@@ -1,0 +1,226 @@
+// fonts 
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-BoldItalic.eot');
+    src: url('./fonts/Roboto-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-BoldItalic.woff2') format('woff2'),
+        url('./fonts/Roboto-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Black.eot');
+    src: url('./fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-Black.woff2') format('woff2'),
+        url('./fonts/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Bold.eot');
+    src: url('./fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-Bold.woff2') format('woff2'),
+        url('./fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Light.eot');
+    src: url('./fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-Light.woff2') format('woff2'),
+        url('./fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-BlackItalic.eot');
+    src: url('./fonts/Roboto-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-BlackItalic.woff2') format('woff2'),
+        url('./fonts/Roboto-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Italic.eot');
+    src: url('./fonts/Roboto-Italic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-Italic.woff2') format('woff2'),
+        url('./fonts/Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-MediumItalic.eot');
+    src: url('./fonts/Roboto-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-MediumItalic.woff2') format('woff2'),
+        url('./fonts/Roboto-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Thin.eot');
+    src: url('./fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-Thin.woff2') format('woff2'),
+        url('./fonts/Roboto-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.eot');
+    src: url('./fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-Regular.woff2') format('woff2'),
+        url('./fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-ThinItalic.eot');
+    src: url('./fonts/Roboto-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-ThinItalic.woff2') format('woff2'),
+        url('./fonts/Roboto-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Medium.eot');
+    src: url('./fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-Medium.woff2') format('woff2'),
+        url('./fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-LightItalic.eot');
+    src: url('./fonts/Roboto-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Roboto-LightItalic.woff2') format('woff2'),
+        url('./fonts/Roboto-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+
+// colors
+$primary: #E6A835;
+$secondary: #A26BF5;
+$success: #35E688;
+$danger: #E53E2D;
+$base: #fff;
+$contrast: #000;
+
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "base": $base,
+  "contrast": $contrast,
+);
+
+
+// headings
+$headings-font-family: 'Roboto', serif;
+$headings-font-weight: 700;
+$headings-color: $primary;
+
+$h1-font-size: clamp(21px, 3vw, 28px);
+$h2-font-size: clamp(19px, 3vw, 26px);
+$h3-font-size: clamp(16px, 3vw, 24px);
+$h4-font-size: clamp(16px, 3vw, 22px);
+$h5-font-size: clamp(14px, 3vw, 18px);
+$h6-font-size: clamp(14px, 3vw, 16px);
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+);
+
+
+// paragrapgs, spans etc 
+$base-font-size: 16px;
+$font-family-base: 'Roboto', serif;
+$p-font-size: clamp(14px, 2vw, 18px);
+$li-font-size: clamp(14px, 2vw, 18px);
+$span-font-size: clamp(14px, 2vw, 18px);
+
+// Custom typography styles
+$custom-typography: (
+  "p": (
+    "font-size": $p-font-size,
+    "font-family": $font-family-base,
+    "font-weight": 400,
+    "line-height": 1.5
+  ),
+  "li": (
+    "font-size": $li-font-size,
+    "font-weight": 400,
+    "line-height": 1.5
+  ),
+  "label": (
+    "font-size": $li-font-size,
+    "font-weight": 400,
+    "line-height": 1.5
+  ),
+  "span": (
+    "font-size": $span-font-size,
+    "font-weight": 400,
+    "line-height": 1.2
+  )
+);
+
+// Apply custom styles
+@each $element, $styles in $custom-typography {
+  #{$element} {
+    @each $property, $value in $styles {
+      #{$property}: $value;
+    }
+    font-family: $font-family-base;
+    color: $body-color;
+  }
+}
+
+
+@import "~bootstrap/scss/bootstrap";

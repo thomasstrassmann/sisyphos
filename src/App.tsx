@@ -1,9 +1,10 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Container, Row, Col, Form, Button, ListGroup, Dropdown } from 'react-bootstrap';
-import { DndProvider, useDrag, useDrop } from 'react-dnd';
+import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import TodoItem from './components/TodoItem.tsx';
 import logo from './images/sisyphos.png';
+import general from './styles/general.module.scss';
 
 interface Todo {
   id: number;
@@ -19,14 +20,20 @@ const App: React.FC = () => {
     const storedTodos = localStorage.getItem(TODO_STORAGE_KEY);
     return storedTodos ? JSON.parse(storedTodos) : [];
   });
+
+  // START states 
   const [newTodo, setNewTodo] = useState('');
   const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
   const [editingId, setEditingId] = useState<number | null>(null);
+  // END states
+
 
   useEffect(() => {
     localStorage.setItem(TODO_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
+ 
 
+  // Start CRUD functions
   const addTodo = useCallback(() => {
     if (newTodo.trim()) {
       setTodos(prevTodos => [
@@ -74,6 +81,7 @@ const App: React.FC = () => {
       )
     );
   }, []);
+  // End CRUD functions
 
   const filteredTodos = todos.filter(todo => {
     if (filter === 'active') return !todo.completed;
@@ -83,27 +91,29 @@ const App: React.FC = () => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <Container className="mt-5">
-        <img className='w-50' src={logo} alt="Sisyphos Logo"/>
-        <h1 className="text-center mb-4">Sisyphos - Keep track of your tasks, achieve them, and so on...</h1>
+      <Container className={`mt-5 ${general.container}`}>
+        <img className={`w-50 d-block mx-auto ${general.logo}`} src={logo} alt="Sisyphos Logo"/>
+        <h1 className="text-center mb-2">Track your tasks and achieve them!</h1>
+        <p className='text-center text-primary bold'><strong>Again and again...</strong></p>
         <Row className="justify-content-center">
-          <Col xs={12} md={6}>
+          <Col xs={12} md={6} className='mt-3 mb-5'>
             <Form onSubmit={e => { e.preventDefault(); addTodo(); }}>
-              <Form.Group className="mb-3 d-flex">
+              <Form.Group className="mb-4 d-flex">
                 <Form.Control
                   type="text"
                   value={newTodo}
                   onChange={e => setNewTodo(e.target.value)}
                   placeholder="Enter a new todo"
+                  className='rounded-pill border-secondary font-family-base'
                 />
                 <Button variant="primary" type="submit" className="ms-2">
-                  Add
+                  <span className='text-base'>Add</span>
                 </Button>
               </Form.Group>
             </Form>
-            <Dropdown className="mb-3">
+            <Dropdown className="mb-4">
               <Dropdown.Toggle variant="secondary" id="dropdown-filter">
-                Filter: {filter}
+                <span className='text-base'>Filter: {filter}</span>
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item onClick={() => setFilter('all')}>All</Dropdown.Item>
@@ -111,7 +121,7 @@ const App: React.FC = () => {
                 <Dropdown.Item onClick={() => setFilter('completed')}>Completed</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <ListGroup>
+            <ListGroup className={general.itemContainer}>
               {filteredTodos.map((todo, index) => (
                 <TodoItem
                   key={todo.id}

@@ -1,0 +1,49 @@
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .logo {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  button:hover {
+    color: #fff !important;
+  }
+
+  .checkmark input {
+    border-radius: 50% !important;
+    border-color: #E6A835;
+    width: 18px;
+    height: 18px;
+    &:checked {
+      background-color: #E6A835;
+      border-color: #E6A835;
+    }
+  }
+
+  .container {
+    position: relative;
+    &::after{
+        content: '';
+        background-image: url('../images/sisyphos-detail.svg');
+        background-repeat: no-repeat;
+        display: block;
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        background-size: contain;
+        right: -50px;
+        bottom: 35px;
+    }
+  }
+
+  @media(max-width:1200px){
+    .container::after{
+        display: none;
+    }
+  }

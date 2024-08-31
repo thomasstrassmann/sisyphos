@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { ListGroup, Form, Button } from 'react-bootstrap';
 import { useDrag, useDrop, DropTargetMonitor } from 'react-dnd';
+import general from '../styles/general.module.scss';
+
 
 interface TodoItemProps {
   todo: {
@@ -90,7 +92,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
       ref={ref}
       style={{ opacity: isDragging ? 0.5 : 1 }}
       data-handler-id={handlerId}
-      className={`d-flex justify-content-between align-items-center ${isOverdue ? 'bg-danger text-white' : ''}`}
+      className={`d-flex justify-content-between align-items-center border-secondary py-3 ${isOverdue ? 'bg-secondary text-white' : ''}`}
     >
       {editingId === todo.id ? (
         <Form onSubmit={(e) => { e.preventDefault(); editTodo(todo.id, editText); }}>
@@ -108,17 +110,19 @@ const TodoItem: React.FC<TodoItemProps> = ({
             checked={todo.completed}
             onChange={() => toggleTodo(todo.id)}
             label={todo.text}
+            className={general.checkmark}
           />
           <div>
             <Form.Control
               type="date"
               value={todo.dueDate ? new Date(todo.dueDate).toISOString().split('T')[0] : ''}
               onChange={(e) => setDueDate(todo.id, e.target.value ? new Date(e.target.value) : null)}
+              className='mb-3 rounded-pill border-secondary'
             />
-            <Button variant="outline-primary" size="sm" onClick={() => setEditingId(todo.id)}>
+            <Button variant="outline-primary" size="sm" className='me-3' onClick={() => setEditingId(todo.id)}>
               Edit
             </Button>
-            <Button variant="outline-danger" size="sm" onClick={() => deleteTodo(todo.id)}>
+            <Button variant="outline-primary" size="sm" onClick={() => deleteTodo(todo.id)}>
               Delete
             </Button>
           </div>
